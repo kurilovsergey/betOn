@@ -11,7 +11,7 @@ async function bootstrap() {
   // add swagger
   const config = new DocumentBuilder()
     .setTitle('Api')
-    .setDescription('The API for project')
+    .setDescription('The API for project BetOn')
     .setVersion('1.0')
     .addTag('API')
     .addBearerAuth()
