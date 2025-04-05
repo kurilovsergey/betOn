@@ -11,7 +11,7 @@ async function bootstrap() {
   // add swagger
   const config = new DocumentBuilder()
     .setTitle('Api')
-    .setDescription('The API for project BetOn 2.0')
+    .setDescription('The API for project BetOn 3.0')
     .setVersion('1.0')
     .addTag('API')
     .addBearerAuth()
@@ -25,6 +25,7 @@ async function bootstrap() {
   app.useGlobalFilters(new AllExceptionsFilter());
 
   app.enableCors();
-  await app.listen(process.env.PORT || 3000);
+  const port = process.env.PORT || 3000;
+  await app.listen(port, '0.0.0.0');
 }
 bootstrap();
